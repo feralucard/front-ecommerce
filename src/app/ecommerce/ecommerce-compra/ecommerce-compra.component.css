@@ -1,0 +1,10 @@
+form{
+  margin-top: 2vw;
+}
+mat-form-field {
+  width:100%;
+}
+
+::ng-deep .mat-mdc-dialog-surface {
+  overflow: hidden;
+}

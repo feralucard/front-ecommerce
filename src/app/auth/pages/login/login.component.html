@@ -1,0 +1,65 @@
+<section class="background">
+    <div class="login__container">
+      <div>
+
+        <div class="container">
+          <div class="screen">
+            <div class="screen__content">
+              <img class="logo" src="../../../assets/images/logo-small.png" />
+              <form [formGroup]="loginForm" class="login">
+                <div class="field">
+                  <mat-grid-list cols="4" rowHeight = "60px">
+                    <mat-grid-tile colspan  ="3"> <mat-form-field >
+                      <mat-label>Usuario</mat-label>
+                        <input matInput autocomplete="off" formControlName="username" />
+                      </mat-form-field>
+                    </mat-grid-tile>
+                  </mat-grid-list>
+                  <mat-grid-list cols="4" rowHeight = "60px">
+                    <mat-grid-tile colspan  ="3"> <mat-form-field >
+                      <mat-label>Correo</mat-label>
+                        <input matInput autocomplete="off" formControlName="email" />
+                      </mat-form-field>
+                    </mat-grid-tile>
+
+                  </mat-grid-list>
+                </div>
+                <div class="field">
+                  <mat-grid-list cols="4" rowHeight = "60px">
+                    <mat-grid-tile colspan  ="3"> <mat-form-field >
+                      <mat-label>contraseña</mat-label>
+                        <input matInput autocomplete="off" formControlName="password" type="password"/>
+                      </mat-form-field>
+                    </mat-grid-tile>
+
+                  </mat-grid-list>
+
+                </div>
+
+                <button class="button login__submit" (click)="onLogin()" >
+                  <span class="button__text" >Log In Now</span>
+                  <i class="button__icon fas fa-chevron-right"></i>
+                </button>
+              </form>
+              <div class="social-login">
+                <h3>Eccomerce</h3>
+                <div class="social-icons">
+                  <a href="#" class="social-login__icon fab fa-instagram"></a>
+                  <a href="#" class="social-login__icon fab fa-facebook"></a>
+                  <a href="#" class="social-login__icon fab fa-twitter"></a>
+                </div>
+              </div>
+            </div>
+            <div class="screen__background">
+              <span class="screen__background__shape screen__background__shape4"></span>
+              <span class="screen__background__shape screen__background__shape3"></span>
+              <span class="screen__background__shape screen__background__shape2"></span>
+              <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>

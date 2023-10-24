@@ -1,0 +1,89 @@
+<div class="row" >
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <form [formGroup]="form" >
+      <div class="row ">
+        <div class="col-sm-12">
+          <div class="label">Nombre del representante legal<span class="obligatorio">*</span><span class="sublabel"></span></div>
+          <mat-form-field appearance="outline" class ="clues_bus">
+              <mat-icon matPrefix>contacts</mat-icon>
+            <input
+              matInput
+              placeholder="Nombre completo del representante legal"
+              autocomplete="off"
+              formControlName="nombre"
+            />
+            <mat-error >Este valor es obligatorio</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12">
+          <div class="label">Apellido paterno del representante legal<span class="obligatorio">*</span><span class="sublabel"></span></div>
+          <mat-form-field appearance="outline" class ="clues_bus">
+              <mat-icon matPrefix>contacts</mat-icon>
+            <input
+              matInput
+              placeholder="Apellido paterno del representante legal"
+              autocomplete="off"
+              formControlName="apellido_paterno"
+            />
+            <mat-error >Este valor es obligatorio</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12">
+          <div class="label">Apellido materno del representante legal<span class="obligatorio">*</span><span class="sublabel"></span></div>
+          <mat-form-field appearance="outline" class ="clues_bus">
+              <mat-icon matPrefix>contacts</mat-icon>
+            <input
+              matInput
+              placeholder="Apellido materno del representante legal"
+              autocomplete="off"
+              formControlName="apellido_materno"
+            />
+            <mat-error >Este valor es obligatorio</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12">
+          <div class="label">Correo electrónico del cliente<span class="obligatorio">*</span><span class="sublabel"></span></div>
+          <mat-form-field appearance="outline" class ="clues_bus">
+              <mat-icon matPrefix>email</mat-icon>
+            <input
+              matInput
+              placeholder="Correo electrónico del cliente"
+              autocomplete="off"
+              formControlName="email"
+            />
+            <mat-error >Este valor es obligatorio y debe contener una dirección de correo válida.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12">
+          <div class="label">Telefono de contacto<span class="obligatorio">*</span><span class="sublabel"></span></div>
+          <mat-form-field appearance="outline" class ="clues_bus">
+              <mat-icon matPrefix>phone</mat-icon>
+            <input
+              matInput
+              (keypress)="soloNumeros($event)"
+              placeholder="Telefono de contacto"
+              autocomplete="off"
+              maxlength="10"
+              formControlName="telefono"
+            />
+            <mat-error >Este valor es obligatorio</mat-error>
+          </mat-form-field>
+        </div>
+
+      </div>
+    </form>
+    <div style="width: 100%;     width: 100%;
+    text-align: center; margin-bottom: 2vw">
+      <button
+      type="button"
+      class="btn btn-success btn-success "
+      [disabled]="!form.valid"
+      (click)="confirmar()"
+      >
+        Confirmar compra
+  </button>
+    </div>
+
+  </div>
+</div>
